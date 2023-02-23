@@ -2,6 +2,11 @@ let movieNameRef = document.getElementById("movie-name");
 let searchBtn = document.getElementById("search-btn");
 let result = document.getElementById("result");
 
+const logo = document.querySelector(".logo");
+searchBtn.addEventListener("click", function () {
+  logo.classList.add("hidden");
+});
+
 // function to fetch data from API OMDb
 
 let getMovie = () => {

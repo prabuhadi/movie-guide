@@ -13,6 +13,16 @@ body {
   background-size: cover;
 }
 
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hidden {
+  opacity: 0%;
+}
+
 .container {
   font-size: 16px;
   width: 90vh;
@@ -51,11 +61,59 @@ body {
   border-color: #fff;
 }
 
-.search-container button {
+/* .search-container button {
   background-color: #51cf66;
   border: none;
   cursor: pointer;
+} */
+
+/* Button */
+
+button {
+  display: inline-block;
   font-weight: 600;
+  border-radius: 4px;
+  background-color: #51cf66;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 16px;
+  transition: all 0.2s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.2s;
+}
+
+button span:after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.2s;
+}
+
+button:hover span {
+  padding-right: 15px;
+}
+
+button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+button:hover {
+  color: #560af0;
+  background-color: #ffffff;
+  box-shadow: 4px 5px 17px -4px #560af0;
 }
 
 /* Content Movie */
@@ -147,6 +205,11 @@ p {
     width: 70vw;
   }
 
+  .logo {
+    width: 100%;
+    margin-top: 2em;
+  }
+
   .poster {
     margin: auto;
     width: auto;
@@ -163,11 +226,15 @@ p {
     width: 100%;
   }
 
+  .logo {
+    margin-top: 4em;
+  }
+
   .search-container {
     grid-template-columns: 1fr;
   }
 
   .search-container button {
-    padding: 0.6em;
+    padding: 1em;
   }
 } ;
